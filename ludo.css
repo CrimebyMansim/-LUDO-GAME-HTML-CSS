@@ -1,0 +1,345 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ludo_board{
+    height: 400px;
+    width: 400px;
+    margin: 50px;
+    border: 2px solid red;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+}
+
+.home{
+    border: 2px solid black;
+}
+ 
+.red{
+    background-color: red;
+    grid-area: 1/1/5/5;    
+    /* grid-area: 7/7/15/12;     */
+}
+
+.green{
+    background-color: green;
+    /* grid-area: 1/9/3/12;     */
+    grid-area: 5/7/1/12;    
+    
+}
+.path{
+    /* background-image: url("/image/blue2.jpg"); */
+    background-color:rgb(255, 252, 252) ;
+    grid-area: 5/5/7/7;    
+    
+}
+.yellow{
+    /* background-image: url("/image/blue2.jpg"); */
+    background-color: yellow;
+    grid-area: 12/1/7/5;    
+    
+}
+.blue{
+    background-image: url("/image/blue2.jpg");
+    /* background-color: darkblue; */
+    grid-area: 12/15/7/7;    
+
+}
+/* left side */
+.cross1{
+    position: absolute;
+    top: 159px;
+    border: 2px solid black;
+    height: 80px;
+    width: 31px;
+}
+.cross2{
+    position: absolute;
+    top: 159px;
+    left: 30px;
+    border: 2px solid black;
+    height: 80px;
+    width: 29px;
+}
+.cross3{
+    position: absolute;
+    top: 159px;
+    left: 58px;
+    border: 2px solid black;
+    height: 80px;
+    width: 27px;
+}
+.cross4{
+    position: absolute;
+    top: 159px;
+    left: 83px;
+    border: 2px solid black;
+    height: 80px;
+    width: 28px;
+}
+.cross5{
+    position: absolute;
+    top: 159px;
+    left: 110px;
+    border: 2px solid black;
+    height: 80px;
+    width: 27px;
+}
+.cross6{
+    position: absolute;
+    top: 159px;
+    left: 135px;
+    border: 2px solid black;
+    height: 80px;
+    width: 26px;
+}
+
+.line1{
+    position: absolute;
+    border: 2px solid black;
+    height: 25px;
+    width: 160px;
+    top: 160px;
+}
+.line2{
+    position: absolute;
+    border: 2px solid black;
+    height: 27px;
+    width: 160px;
+    top: 186px;
+    background-color: red;
+}
+.line3{
+    position: absolute;
+    border: 2px solid black;
+    height: 27px;
+    width: 160px;
+    top: 211px;
+}
+
+/* right side */
+.cross21{
+    position: absolute;
+    top: 159px;
+    right: 0px;
+    border: 2px solid black;
+    height: 80px;
+    width: 30px;
+}
+.cross22{
+    position: absolute;
+    top:159px;
+    right: 29px;
+    border: 2px solid black;
+    height: 80px;
+    width: 27px;
+}
+.cross23{
+    position: absolute;
+    top:159px;
+    right: 54px;
+    border: 2px solid black;
+    height: 80px;
+    width: 27px;
+}
+.cross24{
+    position: absolute;
+    top:159px;
+    right: 80px;
+    border: 2px solid black;
+    height: 80px;
+    width: 27px;
+}
+.cross25{
+    position: absolute;
+    top:159px;
+    right: 106px;
+    border: 2px solid black;
+    height: 80px;
+    width: 27px;
+}
+.cross26{
+    position: absolute;
+    top:159px;
+    right: 132px;
+    border: 2px solid black;
+    height: 80px;
+    width: 29px;
+}
+
+.line21{
+    position: absolute;
+    border: 2px solid black;
+    height: 25px;
+    width: 160px;
+    top: 160px;
+    right: 0px;
+}
+.line22{
+    position: absolute;
+    border: 2px solid black;
+    height: 25px;
+    width: 160px;
+    top: 186px;
+    right: 0px;
+    background-color: darkblue;
+}
+.line23{
+    position: absolute;
+    border: 2px solid black;
+    height: 27px;
+    width: 160px;
+    top: 211px;
+    right: 0px;
+}
+
+/* bottom side */
+.cross211{
+    position: absolute;
+    bottom:0px;
+    left: 159px;
+    border: 2px solid black;
+    height: 30px;
+    width: 80px;
+}
+.cross222{
+    position: absolute;
+    bottom:29px;
+    left: 159px;
+    border: 2px solid black;
+    height: 27px;
+    width: 80px;
+}
+.cross233{
+    position: absolute;
+    bottom:55px;
+    left: 159px;
+    border: 2px solid black;
+    height: 27px;
+    width: 80px;
+}
+
+.cross244{
+    position: absolute;
+    bottom:81px;
+    left: 159px;
+    border: 2px solid black;
+    height: 27px;
+    width: 80px;
+}
+.cross255{
+    position: absolute;
+    bottom:107px;
+    left: 159px;
+    border: 2px solid black;
+    height: 27px;
+    width: 80px;
+}
+
+.line211{
+    position: absolute;
+    border: 2px solid black;
+    height: 160px;
+    width: 27px;
+    left: 211px;
+    right: 0px;
+    top: 239px;
+}
+.line222{
+    position: absolute;
+    border: 2px solid black;
+    height: 160px;
+    width: 27px;
+    left: 186px;
+    right: 0px;
+    top: 239px;
+    background-color: yellow;
+}
+.line233{
+    position: absolute;
+    border: 2px solid black;
+    height: 160px;
+    width: 27px;
+    left: 159px;
+    right: 0px;
+    top: 239px;
+}
+
+/* top side */
+.cross2111{
+    position: absolute;
+    top:0px;
+    left: 159px;
+    border: 2px solid black;
+    height: 30px;
+    width: 80px;
+}
+
+.cross2221{
+    position: absolute;
+    top:29px;
+    left: 159px;
+    border: 2px solid black;
+    height: 27px;
+    width: 80px;
+}
+
+.cross2331{
+    position: absolute;
+    top:55px;
+    left: 159px;
+    border: 2px solid black;
+    height: 27px;
+    width: 80px;
+}
+
+.cross2441{
+    position: absolute;
+    top:81px;
+    left: 159px;
+    border: 2px solid black;
+    height: 27px;
+    width: 80px;
+}
+.cross2551{
+    position: absolute;
+    top:107px;
+    left: 159px;
+    border: 2px solid black;
+    height: 27px;
+    width: 80px;
+}
+
+.line2111{
+    position: absolute;
+    border: 2px solid black;
+    height: 160px;
+    width: 27px;
+    left: 211px;
+    right: 0px;
+    bottom: 239px;
+}
+.line2221{
+    position: absolute;
+    border: 2px solid black;
+    height: 160px;
+    width: 27px;
+    left: 186px;
+    right: 0px;
+    bottom: 239px;
+    background-color: green;
+}
+.line2331{
+    position: absolute;
+    border: 2px solid black;
+    height: 160px;
+    width: 27px;
+    left: 159px;
+    right: 0px;
+    bottom: 239px;
+}
